@@ -17,7 +17,7 @@ pip install 'scipy==1.4.1' --force-reinstall
 ```
 #### Using `conda`
 `conda create -n dsix python=3.6 numpy pandas h5py biopython scipy keras scikit-learn tensorflow-gpu`,
-or using the yml setup file depending on the conda version
+or using the yml setup file depending on the conda version```
 `conda env create -f dsix.yml` or `conda create -n dsix -f dsix.yml` 
 
 ### Usage:
