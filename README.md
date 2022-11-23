@@ -54,7 +54,7 @@ Batch encode sequences for custom training datasets, e.g. duplodnaviria with len
                         class: prokaryote, eukaryote, duplodnaviria,
                         varidnaviria, monodnaviria, riboviria
 ```
-Train custom model, e.g. fragment length set to 250nt, 525 nerons, kernel size 10 for 40 epochs
+Train custom model, e.g. fragment length set to 250nt, 525 neurons, kernel size 10 for 40 epochs
 
 `python Master/deep6_train.py -l 250 -t ../train_encode -v ../val_encode -o outdir -n 525 -k 10 -e 40`
 
