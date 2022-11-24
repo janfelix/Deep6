@@ -3,7 +3,7 @@ Author: Jan Felix Finke, 2022
 See [LICENSE](https://github.com/janfelix/Deep6/blob/main/LICENSE) for licensing
 
 ### Setup Environment and Install Packages
-These instructions are focused on Linux based servers and using Python 3.6, especially the tensorflow-gpu package can be difficult to implement for other systems. The sequence prediction is fully functional, custom model training when using different versions of tensorflow-gpu might be impaired.
+Clone the "Deep6" repository using the code button on top or in your terminal using: `git clone https://github.com/janfelix/Deep6.git`. The Master directory includes the license file, this readme file, a conda yml file and the python scripts. The Model directory contains the pre-trained default models. The installation instructions are focused on Linux systems and use Python 3.6. The tensorflow-gpu package can be difficult to implement for non Linux systems, custom model training when using different versions of tensorflow-gpu might be impaired.
 
 #### Using virtual environment
 ```
@@ -35,14 +35,14 @@ There is no conda installer for tensorflow-gpu 2.6.0 for Mac OSX, the following 
 ```
 conda create -n dsix python=3.6 numpy pandas h5py biopython scipy keras scikit-learn
 conda activate dsix
-pip3 install tensorflow tensorflow_gpu
+pip install tensorflow tensorflow_gpu
 ```
 
 ### Usage:
 
 Predict sequences with default model, e.g. minimum legnth set to 250nt
 
-`python Master/deep6.py -i inputfile.fasta -l 250 -m Models -o outdir`
+`python Deep6/Master/deep6.py -i ./inputfile.fasta -l 250 -m Deep6/Models -o outdir`
 ##### Options:
 ```
   -h, --help            show this help message and exit
@@ -56,7 +56,7 @@ Predict sequences with default model, e.g. minimum legnth set to 250nt
 
 Batch encode sequences for custom training datasets, e.g. duplodnaviria with length set to 250nt
 
-`python Master/deep6_encode.py -i ../inputfile -l 250 -c duplodnaviria`
+`python Deep6/Master/deep6_encode.py -i ./inputfile.fasta -l 250 -c duplodnaviria`
 ##### Options:
 ```
   -h, --help            show this help message and exit
@@ -70,7 +70,7 @@ Batch encode sequences for custom training datasets, e.g. duplodnaviria with len
 ```
 Train custom model, e.g. fragment length set to 250nt, 525 neurons, kernel size 10 for 40 epochs
 
-`python Master/deep6_train.py -l 250 -t ../train_encode -v ../val_encode -o outdir -n 525 -k 10 -e 40`
+`python Deep6/Master/deep6_train.py -l 250 -t ./train_encode -v ./val_encode -o outdir -n 525 -k 10 -e 40`
 
 ##### Options:
 ```
