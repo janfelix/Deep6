@@ -3,7 +3,7 @@ Author: Jan Felix Finke, 2022
 See [LICENSE](https://github.com/janfelix/Deep6/blob/main/LICENSE) for licensing
 
 ### Setup Environment and Install Packages
-Clone the "Deep6" repository using the code button on top or in your terminal using: `git clone https://github.com/janfelix/Deep6.git`. The Master directory includes the license file, this readme file, a conda yml files and the python scripts. The Model directory contains the pre-trained default models. The installation instructions are focused on Linux systems and use Python 3.6. The tensorflow-gpu package can be difficult to implement for non Linux systems, custom model training when using different versions of tensorflow-gpu might be impaired.
+Clone the "Deep6" repository using the code button on top or in your terminal using: `git clone https://github.com/janfelix/Deep6.git`. The Master directory includes the license file, this readme file, conda yml files and the python scripts. The Model directory contains the pre-trained default models. The installation instructions are focused on Linux systems and use Python 3.6. The tensorflow-gpu package can be difficult to implement for non Linux systems, custom model training when using different versions of tensorflow-gpu might be impaired.
 
 #### Using virtual environment
 ```
