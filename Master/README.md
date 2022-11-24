@@ -3,7 +3,7 @@ Author: Jan Felix Finke, 2022
 See [LICENSE](https://github.com/janfelix/Deep6/blob/main/LICENSE) for licensing
 
 ### Setup Environment and Install Packages
-Clone the "Deep6" repository using the code button on top or in your terminal using: `git clone https://github.com/janfelix/Deep6.git`. The Master directory includes the license file, this readme file, a conda yml file and the python scripts. The Model directory contains the pre-trained default models. The installation instructions are focused on Linux systems and use Python 3.6. The tensorflow-gpu package can be difficult to implement for non Linux systems, custom model training when using different versions of tensorflow-gpu might be impaired.
+Clone the "Deep6" repository using the code button on top or in your terminal using: `git clone https://github.com/janfelix/Deep6.git`. The Master directory includes the license file, this readme file, conda yml files and the python scripts. The Model directory contains the pre-trained default models. The installation instructions are focused on Linux systems and use Python 3.6. The tensorflow-gpu package can be difficult to implement for non Linux systems, custom model training when using different versions of tensorflow-gpu might be impaired.
 
 #### Using virtual environment
 ```
@@ -21,22 +21,25 @@ pip install 'scipy==1.4.1' --force-reinstall
 
 For Linux systems:
 
-Create a conda environment and install required packages. This is the recommended method, but can take a few minutes. Conda will need the following channels: default, anaconda, conda-forge. If necessary add channels `conda config --add channels conda-forge`.
+Create a conda environment and install required packages. This is the recommended method, but can take a few minutes. Conda will need the following channels: default, anaconda, conda-forge, pypi. If necessary add channels `conda config --add channels conda-forge`.
 
 `conda create -n dsix python=3.6 numpy pandas h5py biopython scipy keras scikit-learn tensorflow-gpu`
 
-Or using the yml setup file for the specific package versions, this can create system based version conflicts:
+Or using the yml setup file for the specific package versions.
 
-`conda env create -n dsix -f dsix.yml` 
+`conda env create -n dsix -f dsix_linux.yml` 
 
 For Mac OSX systems:
 
-There is no conda installer for tensorflow-gpu 2.6.0 for Mac OSX, the following installs tensorflow-gpu 1.1.0 through pypi. Conda will need the following channels: default, anaconda, conda-forge. If necessary add channels `conda config --add channels conda-forge`.
+There is no conda installer for tensorflow-gpu 2.6.0 for Mac OSX, the following installs tensorflow-gpu 1.1.0 through pypi. Conda will need the following channels: default, anaconda, conda-forge, pypi. If necessary add channels `conda config --add channels conda-forge`.
 ```
 conda create -n dsix python=3.6 numpy pandas h5py biopython scipy keras scikit-learn
 conda activate dsix
 pip install tensorflow tensorflow_gpu
 ```
+Or using the yml setup file for the specific package versions, using pypi.
+
+`conda env create -n dsix -f dsix_mac.yml`
 
 ### Usage:
 
