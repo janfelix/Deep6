@@ -20,13 +20,17 @@ pip install 'scipy==1.4.1' --force-reinstall
 #### Using `conda`
 
 For Linux based servers:
+
 Create a conda environment and install required packages. This is the recommended method, but can take a few minutes:
+
 `conda create -n dsix python=3.6 numpy pandas h5py biopython scipy keras scikit-learn tensorflow-gpu`
 
 Or using the yml setup file for the specific package version. This can create sytem based conflicts:
+
 `conda create -n dsix -f dsix.yml` 
 
 For Mac OSX systems:
+
 There is no conda installer for tensorflow-gpu 2.6.0 for Mac OSX, the following installs tesnorflow-gpu 1.1.0 through pypi:
 ```
 conda create -n dsix python=3.6 numpy pandas h5py biopython scipy keras scikit-learn
