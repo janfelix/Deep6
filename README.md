@@ -3,12 +3,14 @@
 #### See [LICENSE](https://github.com/janfelix/Deep6/blob/main/LICENSE) for licensing.
 
 ### Description:
-Deep6 is a reference-independent and alignment-free tool to predict viral sequences in short metatrascriptome data, it can process input contigs as short as 250 nt. Four models for differetn length ranges of query sequences are provided, the repository also includes scripts to custom train alternative models. The primary prediction script selects the appropriate model for each input sequence length and automatically encodes and predicts the sequence. For each sequence group scores are calculated, based on those final prediction is derived in the downstream analysis. 
+Deep6 is a reference-independent and alignment-free tool to predict viral sequences in short metatrascriptome data, it can process input contigs as short as 250 nt. Four models for different length ranges of query sequences are provided, the repository also includes scripts to custom train alternative models. The primary prediction script selects the appropriate model for each input sequence length and automatically encodes and predicts the sequence. For each sequence group scores are calculated, based on those final prediction is derived in the downstream analysis. 
+
 To train custom models, the batch-encoding script splits sets of CDS into 90% training data and 10% validation data, chunks of CDS of appropriate length for the model in overlapping forward and reverse order are then one-hot encoded. In a next step the training script feeds the encoded training and validation data into the CNN and saves the best model. During training models are optimized for accuracy; model performance is assessed by training and validation area under receiver operating characteristic curve (AUROC), average accuracy, and group precision, recall and derived F1-scores. Additionally, a confusion matrix of sequence predictions is produced for the final model.
 
 
 ### Setup Environment and Install Packages:
 Clone the "Deep6" repository using the code button on top or in your terminal using: `git clone https://github.com/janfelix/Deep6.git`. The Master directory includes the license file, this readme file, a conda yml file and the python scripts for sequence prediction, batch encoding and custom model training. The provided R-script processes group scores per sequence into a final prediction for easy down stream processing. The Model directory contains the pre-trained default models for marine samples. 
+
 The installation instructions are focused on Linux systems and use Python 3.6, numpy, pandas, h5py, biopython, scipy, keras, tensorflow-gpu and scikit-learn. The tensorflow-gpu package can be difficult to implement for non Linux systems, custom model training when using different versions of tensorflow-gpu might be impaired. Especially for custom model training it is advised to use gpu equipped servers, any reasonably scaled model training will exceed cpu systems.
 
 #### Using virtual environment
