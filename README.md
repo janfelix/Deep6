@@ -55,7 +55,7 @@ Or using the yml setup file for the specific package versions, using pypi.
 
 `python Deep6/Master/deep6.py -i ./inputfile.fasta -l 250 -m Deep6/Models -o outdir`
 
-Options: -i defines the input file with contigs in fasta format; -l is the minimum contig length to analyze; -m defines the directory with the models; -o defines the directory to save the outputfile.
+Options, -i defines the input file with contigs in fasta format; -l is the minimum contig length to analyze; -m defines the directory with the models; -o defines the directory to save the outputfile.
 ```
   -h, --help            show this help message and exit
   -i IFILE, --infile=IFILE
@@ -70,7 +70,7 @@ Options: -i defines the input file with contigs in fasta format; -l is the minim
 
 `python Deep6/Master/deep6_encode.py -i Deep6/Master/test_data.fasta -l 250 -c duplodnaviria`
 
-Options: -i defines the input file with sequences to encode in fasta format, one file per training class; -l is the fragment length to encode, -c denotes the corresponding class; encoded files for training and validation are saved in the input file directories.
+Options, -i defines the input file with sequences to encode in fasta format, one file per training class; -l is the fragment length to encode, -c denotes the corresponding class; encoded files for training and validation are saved in the input file directories.
 ```
   -h, --help            show this help message and exit
   -i IFILE, --infile=IFILE
@@ -86,7 +86,7 @@ Options: -i defines the input file with sequences to encode in fasta format, one
 
 `python Deep6/Master/deep6_train.py -l 250 -t ./train_encode -v ./val_encode -o outdir -n 525 -k 10 -e 40`
 
-Options: -l defines the fragment length for the specific model, corrsponding to the fragment lengths defined during batch encoding; -t defines the directory for training data; -v defines the directory for validation data; -n defines the number of dense layers (default 525); -e defines the maximum number of epochs to run model optimization.
+Options, -l defines the fragment length for the specific model, corrsponding to the fragment lengths defined during batch encoding; -t defines the directory for training data; -v defines the directory for validation data; -n defines the number of dense layers (default 525); -e defines the maximum number of epochs to run model optimization.
 ```
   -h, --help            show this help message and exit
   -l MLENGTH, --length=MLENGTH
