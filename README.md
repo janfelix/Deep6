@@ -111,7 +111,7 @@ To test the installation and demonstrate the function of Deep6 analyze the provi
 
 ### Interpreting Results:
 
-The provided R-script [deep6_interpetration.R](https://github.com/janfelix/Deep6/blob/main/Master/deep6_interpetration.R) assigns group prediction for each sequence based on the group with the highest score, if that score also is 1.25x higher than the median score. It also produces an overview of the contig prediction for the analysed input file. It should be noted that this is only a suggested approach to interpret the predictions. Depending on the research question it also feasible to only differentiate between e.g. any cellular vs. any viral or to consider e.g. second highest scores.
+The provided R-script [deep6_interpretation.R](https://github.com/janfelix/Deep6/blob/main/Master/deep6_interpetration.R) assigns group prediction for each sequence based on the group with the highest score, if that score also is 1.25x higher than the median score. It also produces an overview of the contig prediction for the analysed input file. It should be noted that this is only a suggested approach to interpret the predictions. Depending on the research question it also feasible to only differentiate between e.g. any cellular vs. any viral or to consider e.g. second highest scores.
 
 ### Supplementary files:
  
